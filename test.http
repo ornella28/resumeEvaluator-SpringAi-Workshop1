@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/resume/evaluate
+Content-Type: application/json
+
+{
+  "resume": "Java developer with Spring Boot experience",
+  "jobDescription": "Looking for backend developer with Java and Docker"
+}
