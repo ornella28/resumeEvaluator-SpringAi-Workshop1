@@ -1,7 +1,14 @@
-POST http://localhost:8080/api/resume/evaluate
-Content-Type: application/json
+POST http://localhost:8080/api/resume/evaluate/pdf
+Content-Type: multipart/form-data; boundary=boundary
 
-{
-  "resume": "Java developer with Spring Boot experience. I have built REST APIs and used MYSQL",
-  "jobDescription": "We need a backend developer with Java, Spring Boot, REST APIs, Docker, SQL and Git."
-}
+--boundary
+Content-Disposition: form-data; name="resumeFile"; filename="resume.pdf"
+Content-Type: application/pdf
+
+< ./resume.pdf
+--boundary
+Content-Disposition: form-data; name="jobDescriptionFile"; filename="job-description.pdf"
+Content-Type: application/pdf
+
+< ./job-description.pdf
+--boundary--
