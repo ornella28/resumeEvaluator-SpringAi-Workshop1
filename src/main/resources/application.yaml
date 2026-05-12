@@ -8,11 +8,11 @@ spring:
 
     openai:
       api-key: ${OPENAI_API_KEY}
-      base-url: https://api.openai.com/
+
 
       chat:
         options:
-          model: gpt-4o
+          model: gpt-4o-mini
           max-tokens: 1024
           temperature: 0.2
 
