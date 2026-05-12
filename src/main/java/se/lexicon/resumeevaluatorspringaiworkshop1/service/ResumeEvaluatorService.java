@@ -27,11 +27,13 @@ public class ResumeEvaluatorService {
                 Job description:
                 %s
 
-                Return the result as a structured object with:
-                - matchScore: number from 0 to 100
-                - strengths: list of matching skills or experiences
-                - missingSkills: list of important missing skills
-                - feedback: list of clear improvement suggestions
+                 Return the result as a structured object with:
+                 - matchScore: number from 0 to 100
+                 - summary: short summary of the match
+                 - matchedSkills: list of skills found in both resume and job description
+                 - strengths: list of strong points in the resume
+                 - missingSkills: list of important skills from the job description that are missing or weak in the resume
+                 - improvementSuggestions: list of clear, actionable suggestions to improve the resume
                 """.formatted(request.resume(), request.jobDescription());
 
         return chatClient
